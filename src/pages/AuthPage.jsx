@@ -29,6 +29,7 @@ const AuthPage = () => {
               navigate("/production");
             } else {
               setError("Código incorrecto");
+              setPinCode("");
               setIsLoading(false);
             }
           }, 800);
@@ -109,14 +110,14 @@ const AuthPage = () => {
               onDelete={handleDelete}
             />
           </div>
-
-          <ErrorMessage
-            message={error}
-            position="top-left"
-            onClose={() => setError("")}
-          />
         </div>
       </div>
+
+      <ErrorMessage
+        message={error}
+        position="top-right"
+        onClose={() => setError("")}
+      />
 
       {/* Loading Overlay */}
       {isLoading && (

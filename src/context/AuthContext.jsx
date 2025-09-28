@@ -15,12 +15,17 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
 
   const login = (credentials) => {
-    if (credentials.role && credentials.pin && credentials.pin.length === 4) {
+    if (
+      credentials.role &&
+      credentials.pin &&
+      credentials.pin.length === 4 &&
+      credentials.pin === '1234'
+    ) {
       setIsAuthenticated(true);
-      setUser({ 
-        role: credentials.role, 
+      setUser({
+        role: credentials.role,
         name: credentials.role === 'manager' ? 'Manager' : 'Técnico',
-        pin: credentials.pin 
+        pin: credentials.pin,
       });
       return true;
     }
