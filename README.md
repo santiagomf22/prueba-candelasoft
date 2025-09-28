@@ -30,7 +30,7 @@ npm run dev
 
 5. Abrir el navegador y navegar a `http://localhost:5173`
 
-6. Para acceder a la página de Producción Automático, en la página de autenticación debes ingresar el código 1234. Solo este código es válido; cualquier otro mostrará un error.
+6. Para acceder a la página de Producción Automático, en la página de autenticación debes ingresar el código **1234**. Solo este código es válido; cualquier otro mostrará un error.
 
 ## 📦 Scripts Disponibles
 
